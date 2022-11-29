@@ -6,14 +6,14 @@
  */
 int check_cycle(listint_t *list)
 {
-	listint_t *temp = list;
+	listint_t *temp1 = list, *temp2 = list;
 
-	if (list == NULL)
-		return (0);
 	while (list != NULL)
 	{
-		list = list->next;
-		if (list == temp)
+		temp = temp2->next;
+		if (!temp1 || !temp2)
+			return (0);
+		if (temp2 == temp1)
 			return (1);
 	}
 	return (0);
