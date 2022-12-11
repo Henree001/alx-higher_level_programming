@@ -6,11 +6,11 @@ if number < 0:
     num = num % 10
     num *= -1
 else:
-    lastdigit = number % 10
-if lastdigit > 5:
-    print(f"Last digit of {number} is {lastdigit} and is greater than 5")
-elif lastdigit == 0:
+    num = number % 10
+if num > 5:
+    print(f"Last digit of {number} is {num} and is greater than 5")
+elif num == 0:
     print(f"Last digit of {number} is 0 and is 0")
 else:
-    print(f"Last digit of {number} is {lastdigit}", end=' ')
+    print(f"Last digit of {number} is {num}", end=' ')
     print("and is less than 6 and not 0")
