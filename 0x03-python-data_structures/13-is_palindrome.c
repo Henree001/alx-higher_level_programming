@@ -25,8 +25,6 @@ int is_palindrome(listint_t **head)
 		}
 		if ((i % 2) == 0 && temp2->n != arr[i - 1])
 			return (0);
-		else
-			return (0);
 	}
 	return (1);
 }
