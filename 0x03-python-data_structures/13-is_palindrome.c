@@ -23,7 +23,7 @@ int is_palindrome(listint_t **head)
 			i--;
 			k++;
 		}
-		if ((i % 2) == 0 && temp2->n != arr[i -1])
+		else
 			return (0);
 	}
 	return (1);
