@@ -20,11 +20,11 @@ int is_palindrome(listint_t **head)
 		if (temp2->n == arr[i - 1])
 		{
 			temp2 = temp2->next;
-			i--;
-			k++;
 		}
-		else
+		if ((i % 2) == 0 && temp2->n != arr[i - 1])
 			return (0);
+		i--;
+		k++;
 	}
 	return (1);
 }
