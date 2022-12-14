@@ -22,9 +22,9 @@ int is_palindrome(listint_t **head)
 		if (temp2->n == arr[i - 1])
 		{
 			temp2 = temp2->next;
+			i--;
+			k++;
 		}
-		i--;
-		k++;
 	}
 	return (1);
 }
