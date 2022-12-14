@@ -4,7 +4,7 @@ int is_palindrome(listint_t **head)
 {
 	int i = 0; 
 	int k = 0;
-	int arr[1000];
+	int arr[4000];
 	listint_t *temp1 = *head, *temp2 = *head;
 
 	if (*head == NULL || (*head)->next == NULL)
