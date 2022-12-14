@@ -17,12 +17,12 @@ int is_palindrome(listint_t **head)
 	}
 	while (k < (i / 2) -1)
 	{
+		if ((i % 2) == 0 && temp2->n != arr[i - 1])
+			return (0);
 		if (temp2->n == arr[i - 1])
 		{
 			temp2 = temp2->next;
 		}
-		if ((i % 2) == 0 && temp2->n != arr[i - 1])
-			return (0);
 		i--;
 		k++;
 	}
