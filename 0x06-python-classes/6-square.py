@@ -28,16 +28,17 @@ class Square:
 
     @property
     def position(self):
-        """Get/set the current position of the square."""
+        """Get the current position of the square."""
         return self.__position
 
     @position.setter
     def position(self, value):
+        """set the current position of the square."""
         if type(value) != tuple or len(value) != 2:
             raise TypeError('position must be a tuple of 2 positive integers')
         for item in value:
-            if type(item) != int or item < 0
-                raise TypeError("position must be a tuple of 2 positive integers")
+            if type(item) != int or item < 0:
+                raise TypeError('position must be a tuple of 2 positive integers')
 
     def area(self):
         """Return the current area of the square."""
