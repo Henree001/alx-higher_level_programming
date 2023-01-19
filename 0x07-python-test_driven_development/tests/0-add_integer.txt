@@ -1,0 +1,71 @@
+Test cases for "0-add_integer"
+===============================
+
+This module adds two integers
+--------------------------------
+
+First import 'add_integer'
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+Now use it:
+
+Basic usage:
+    >>> add_integer(1, 5)
+    6
+
+One Negative usage:
+    >>> add_integer(-2, 4)
+    2
+
+Double negative usage:    
+    >>> add_integer(-2, -4)
+    -6
+
+One integer input:
+    >>> add_integer(2)
+    96
+
+One negative input
+    >>> add_integer(-2)
+    100
+
+One float input:
+    >>> add_integer(-2.3)
+    96
+
+One float and negative input:
+    >>> add_integer(-2, 100.3)
+    98
+
+Double negative float input:
+    >>>  add_integer(-100.5, -10.8)
+    -110
+
+One string input:
+    >>>  add_integer(4, "School")
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+
+Double string input:
+    >>> add_integer("holberton", "school")
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+None input:
+    >>> add_integer(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+Float NaN:
+    >>> add_integer(float('NaN'))
+    Traceback (most recent call last):
+    ...
+    ValueError: cannot convert float NaN to integer
+
+Float inf:
+	 >>> add_integer(2, float('inf'))
+    Traceback (most recent call last):
+    OverflowError: cannot convert float infinity to integer
