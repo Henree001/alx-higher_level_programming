@@ -16,11 +16,10 @@ def matrix_divided(matrix, div):
         A new matrix representing the result of the division.
         """
 
+    text = 'matrix must be a matrix (list of lists) of integers/floats'
     for item in matrix:
         for i in item:
             if type(i) != int and type(i) != float:
-                text = 'matrix must be a matrix (list of lists)\
-                of integers/floats'
                 raise TypeError(text)
         if len(item) != len(matrix[0]):
             raise TypeError('Each row of the matrix must have the same size')
