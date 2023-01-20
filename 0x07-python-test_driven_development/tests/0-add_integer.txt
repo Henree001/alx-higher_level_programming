@@ -23,11 +23,11 @@ Double negative usage:
 
 One integer input:
     >>> add_integer(2)
-    96
+    100
 
 One negative input
     >>> add_integer(-2)
-    100
+    96
 
 One float input:
     >>> add_integer(-2.3)
@@ -38,11 +38,11 @@ One float and negative input:
     98
 
 Double negative float input:
-    >>>  add_integer(-100.5, -10.8)
+    >>> add_integer(-100.5, -10.8)
     -110
 
 One string input:
-    >>>  add_integer(4, "School")
+    >>> add_integer(4, "School")
     Traceback (most recent call last):
     ...
     TypeError: b must be an integer
@@ -66,7 +66,7 @@ Float NaN:
     ValueError: cannot convert float NaN to integer
 
 Float inf:
-	>>> add_integer(2, float('inf'))
+    >>> add_integer(float('inf'))
     Traceback (most recent call last):
     ...
     OverflowError: cannot convert float infinity to integer
