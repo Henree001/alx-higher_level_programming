@@ -9,16 +9,20 @@ def text_indentation(text):
     Raises:
         TypeError: if text is not a string.
     """
-    idx = 0
+
     if type(text) != str:
         raise TypeError('text must be a string')
-    for i in text:
-        print(i, end='')
-        if i == '.' or i == '?' or i == ':':
-            print('\n')
+
+    # Removes the space after special chars
+    idx = 0
+    for item in text:
+        if item == '.' or item == '?' or item == ':':
             if text[idx + 1] == " ":
                 text = text[:idx + 1] + text[idx + 2:]
             else:
                 idx += 1
-        else:    
-                idx += 1
+
+    for i in text:
+        print(i, end='')
+        if i == '.' or i == '?' or i == ':':
+            print('\n')
