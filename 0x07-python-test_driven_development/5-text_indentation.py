@@ -17,5 +17,8 @@ def text_indentation(text):
         if i == '.' or i == '?' or i == ':':
             print('\n')
             if text[idx + 1] == " ":
-                continue
-        idx += 1
+                text = text[:idx + 1] + text[idx + 2:]
+            else:
+                idx += 1
+        else:    
+                idx += 1
