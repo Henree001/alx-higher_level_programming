@@ -13,7 +13,13 @@ Now use it:
         ####
         ####
         ####
-        
+
+    An integer input < 0:
+        >>> print_square(-1)
+        Traceback (most recent call last):
+        ...
+        TypeError: size must be >= 0
+
     String input:
         >>> print_square('School')
         Traceback (most recent call last):
