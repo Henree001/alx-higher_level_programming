@@ -22,14 +22,14 @@ class TestMaxInteger(unittest.TestCase):
         example = []
         self.assertEqual(max_integer(example), None)
 
-    def test_max_integer_neg:
+    def test_max_integer_neg(self):
         """ tests if list has a negative int
         """
 
         example = [-1, -2, -3, -4]
         self.assertEqual(max_integer(example), -1)
 
-    def test_max_integer_one_input:
+    def test_max_integer_one_input(self):
         """ tests if list has only one item
         """
 
