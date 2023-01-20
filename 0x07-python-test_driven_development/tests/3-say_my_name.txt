@@ -13,7 +13,7 @@ Basic usage:
 
 One string input:
     >>> say_my_name('john')
-    My name is john
+    My name is john 
 
 Non string input:
     >>> say_my_name(3, 3)

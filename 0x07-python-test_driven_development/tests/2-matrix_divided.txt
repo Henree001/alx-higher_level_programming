@@ -5,7 +5,7 @@ The function divides all elements of a matrix by div.
 ------------------------------------------------------
 
 first import 'matrix_divided'
-    >>> matrix_divided = __import__('2-matrix_divided.py').matrix_divided
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
 
 Now use it:
  
