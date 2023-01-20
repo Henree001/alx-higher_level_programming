@@ -3,7 +3,7 @@ Test cases for '4-print_square.py'
 The function prints a square
 -----------------------------
 First import '4-print_square.py'
-    >>> print_square =  __import__('4-print_square.py').print_square
+    >>> print_square =  __import__('4-print_square').print_square
 
 Now use it:
     

@@ -37,4 +37,4 @@ Last name wrong input:
     >>> say_my_name("Bob", 3)
     Traceback (most recent call last):
     ...
-    TypeError: last_name must be a string    
+    TypeError: last_name must be a string

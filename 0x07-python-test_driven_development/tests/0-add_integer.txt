@@ -66,6 +66,6 @@ Float NaN:
     ValueError: cannot convert float NaN to integer
 
 Float inf:
-	 >>> add_integer(2, float('inf'))
+	>>> add_integer(2, float('inf'))
     Traceback (most recent call last):
     OverflowError: cannot convert float infinity to integer
