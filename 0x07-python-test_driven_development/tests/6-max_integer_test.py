@@ -5,10 +5,10 @@
 import unittest
 max_integer = __import__('6-max_integer').max_integer
 
-class Testmax_integer(unittest.TestCase):
+class TestMaxInteger(unittest.TestCase):
     """ tests for max_integer"""
 
-    def test_max_integer(self):
+    def test_max_integer_end(self):
         """tests normal list of ints
         """
 
@@ -20,7 +20,7 @@ class Testmax_integer(unittest.TestCase):
         """
 
         example = []
-        self.asser00tEqual(max_integer(example), None)
+        self.assertEqual(max_integer(example), None)
 
     def test_max_integer_neg:
         """ tests if list has a negative int
