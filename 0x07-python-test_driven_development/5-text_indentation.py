@@ -18,7 +18,7 @@ def text_indentation(text):
     for item in text:
         if item == '.' or item == '?' or item == ':':
             if text[idx + 1] == " ":
-                text = text[:idx + 1] + text[idx + 2:]
+                text = text[:idx] + text[idx + 2:]
         else:
             idx += 1
 
