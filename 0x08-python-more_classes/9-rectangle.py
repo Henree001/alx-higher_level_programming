@@ -116,4 +116,4 @@ class Rectangle:
         Args:
             size: size of Rectangle instance
         """
-        return cls(size, size)
+        return (cls(size, size))
