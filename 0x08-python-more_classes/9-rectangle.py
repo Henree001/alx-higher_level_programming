@@ -116,4 +116,6 @@ class Rectangle:
         Args:
             size: size of Rectangle instance
         """
-        return (cls(size, size))
+        height = size
+        width = size
+        return cls(width,size)
