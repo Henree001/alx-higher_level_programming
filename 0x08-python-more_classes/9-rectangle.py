@@ -118,4 +118,4 @@ class Rectangle:
         """
         height = size
         width = size
-        return cls(width,size)
+        return cls(height, width)
