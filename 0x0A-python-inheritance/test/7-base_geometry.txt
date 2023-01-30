@@ -1,0 +1,74 @@
+Test cases for '7-base_geometry'
+================================
+
+Test cases for two methods of the class BaseGeometry
+----------------------------------------------------
+
+Import module
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+>>> bg = BaseGeometry()
+
+>>> bg.integer_validator("my_int", 12)
+
+>>> bg.integer_validator("width", 89)
+
+Value is not an integer:
+
+>>> bg.integer_validator("name", "John")
+Traceback (most recent call last):
+TypeError: name must be an integer
+
+>>> bg.integer_validator("float", 2.5)
+Traceback (most recent call last):
+TypeError: float must be an integer
+
+>>> bg.integer_validator("lst", [1, 2])
+Traceback (most recent call last):
+TypeError: lst must be an integer
+
+>>> bg.integer_validator("tup", (1 ,2))
+Traceback (most recent call last):
+TypeError: tup must be an integer
+
+>>> bg.integer_validator("Nothing", None)
+Traceback (most recent call last):
+TypeError: Nothing must be an integer
+
+>>> bg.integer_validator("boolean", True)
+Traceback (most recent call last):
+TypeError: boolean must be an integer
+
+>>> bg.integer_validator("set", {1, 2})
+Traceback (most recent call last):
+TypeError: set must be an integer
+
+Value is less or equal to 0:
+
+>>> bg.integer_validator("age", 0)
+Traceback (most recent call last):
+ValueError: age must be greater than 0
+
+>>> bg.integer_validator("distance", -4)
+Traceback (most recent call last):
+ValueError: distance must be greater than 0
+
+
+Trying area():
+
+>>> print(bg.area())
+Traceback (most recent call last):
+Exception: area() is not implemented
+
+Wrong number of argument to integer_validator:
+>>> bg.integer_validator()
+Traceback (most recent call last):
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+>>> bg.integer_validator("name")
+Traceback (most recent call last):
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+>>> bg.integer_validator("name", 1, 2)
+Traceback (most recent call last):
+TypeError: integer_validator() takes 3 positional arguments but 4 were given
