@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Add all arguments to a Python list"""
+"""
+Add all arguments to a Python list
+"""
 
 
 import sys
