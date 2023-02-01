@@ -32,5 +32,5 @@ class Student:
             json: a dictionary that contains the new attributes
         """
         for key, value in json.items():
-            if key in self._dict__:
+            if key in self.__dict__:
                 self._dict__[key] = value
