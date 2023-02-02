@@ -94,11 +94,22 @@ class Rectangle(Base):
             print("")
 
     def __str__(self):
+        """Return the print() and str() representation of the Rectangle."""
         string = "[Rectangle] " + "(" + str(self.id) + ") " + str(self.__x) + "/"
         string += str(self.__y) + " - " + str(self.__width) + "/" + str(self.__height)
         return string
 
     def update(self, *args):
+	"""Update the Rectangle.
+        Args:
+            *args (ints): New attribute values.
+                - 1st argument represents id attribute
+                - 2nd argument represents width attribute
+                - 3rd argument represent height attribute
+                - 4th argument represents x attribute
+                - 5th argument represents y attribute
+            **kwargs (dict): New key/value pairs of attributes.
+        """
         if len(args) == 0:
             for k, v in kwargs.items():
                 if k == 'id':
