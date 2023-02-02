@@ -103,13 +103,13 @@ class Rectangle(Base):
             for k, v in kwargs.items():
                 if k == 'id':
                     self.id = v
-                if k = 'width':
+                if k == 'width':
                     self.__width = v
-                if k = 'height':
+                if k == 'height':
                     self.__height = v
-                if k = 'x':
+                if k == 'x':
                     self.__x = v
-                if k = 'y':
+                if k == 'y':
                     self.__y = v
         else:
             try:
