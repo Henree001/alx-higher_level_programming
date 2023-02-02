@@ -1,5 +1,5 @@
 #!/usr/bin/python
-"""Add all arguments to a Python list and saves it to a file."""
+"""Adds all argument to a python list and saves it to file"""
 
 
 import sys
@@ -10,7 +10,5 @@ try:
     items = load_from_json_file("add_item.json")
 except FileNotFoundError:
     item = []
-
-
 items.extend(sys.argv[1:])
 save_to_json_file(items, "add_item.json")
