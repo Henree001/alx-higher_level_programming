@@ -25,7 +25,7 @@ class Rectangle(Base):
         self.__x = x
         self.__y = y
         super.__init__(id)
-	
+
     @property
     def width(self):
         """Set/get the width of the Rectangle."""
@@ -87,7 +87,7 @@ class Rectangle(Base):
         if self.__width == 0 or self.__height == 0:
             print("")
             return
-        
+
         [print("") for y in range(self.__y)]
         for h in range(self.__height):
             [print(" ", end="") for x in range(self.__x)]
@@ -96,12 +96,12 @@ class Rectangle(Base):
 
     def __str__(self):
         """Return the print() and str() representation of the Rectangle."""
-        string = "[Rectangle] " + "(" + str(self.id) + ") " + str(self.__x) + "/"
-        string += str(self.__y) + " - " + str(self.__width) + "/" + str(self.__height)
-        return string
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
+                                                       self.x, self.y,
+                                                       self.width, self.height)
 
     def update(self, *args):
-	"""Update the Rectangle.
+        """Update the Rectangle.
         Args:
             *args (ints): New attribute values.
                 - 1st argument represents id attribute
