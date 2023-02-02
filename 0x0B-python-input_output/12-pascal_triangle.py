@@ -18,5 +18,5 @@ def pascal_triangle(n):
                 temp.append(num)
             else:
                 temp.append(pascal_list[i - 1][y - 1] + pascal_list[i - 1][y])
-        pascal_list.extend(temp)
+        pascal_list.append(temp)
     return pascal_list
