@@ -10,10 +10,14 @@ def pascal_triangle(n):
     """
     if n <= 0:
         return (empty = [])
-    pascal_list = [[1], [1, 1]]
+    num = 1
+    pascal_list = []
     for i in range(n):
         temp = []
         for y in range(i + 1):
-            temp[0 + x] + temp[1 + x]
-            x += 1
-
+            if i == 0 or i == y or y == 0:
+                temp.append(num)
+            else:
+                temp.append(pascal_list[i - 1][y - 1] + pascal_list[i - 1][y])
+        pascal_list.extend(temp)
+    return pascal_list
