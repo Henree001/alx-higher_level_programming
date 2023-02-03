@@ -25,7 +25,7 @@ class Base:
             list_dictionaries: a list of dictionaries
         """
         if list_dictionaries is None or len(list_dictionaries) == []:
-            return []
+            return "[]"
         json_string = json.dumps(list_dictionaries)
         return json_string
 
@@ -38,12 +38,12 @@ class Base:
         filename = cls.__name__ + ".json"
         with open(filename, "w") as f:
             if list_objs is None:
-                jsonfile.write("[]")
+                f.write("[]")
             else:
                 dict_list = []
                 for items in list_objs:
                     dict_list.append(items.to_dictionary())
-                jsonfile.write(cls.to_json_string(dict_list))
+                f.write(cls.to_json_string(dict_list))
 
     @staticmethod
     def from_json_string(json_string):
