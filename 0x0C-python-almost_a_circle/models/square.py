@@ -40,10 +40,8 @@ class Square(Rectangle):
             for k, v in kwargs.items():
                 if k == 'id':
                     self.id = v
-                if k == 'width':
-                    self.width = v
-                if k == 'height':
-                    self.height = v
+                if k == 'size':
+                    self.size = v
                 if k == 'x':
                     self.x = v
                 if k == 'y':
