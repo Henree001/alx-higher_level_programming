@@ -36,7 +36,7 @@ class Square(Rectangle):
                 - 4th argument represents y attribute
             **kwargs (dict): New key/value pairs of attributes.
         """
-        if len(args) == 0:
+        if len(args) == 0 or args is None:
             for k, v in kwargs.items():
                 if k == 'id':
                     self.id = v
@@ -51,10 +51,9 @@ class Square(Rectangle):
         else:
             try:
                 self.id = args[0]
-                self.width = args[1]
-                self.height = args[2]
-                self.x = args[3]
-                self.y = args[4]
+                self.size = args[1]
+                self.x = args[2]
+                self.y = args[3]
             except IndexError:
                 pass
 
