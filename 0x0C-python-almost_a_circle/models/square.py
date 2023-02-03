@@ -19,7 +19,7 @@ class Square(Rectangle):
     @property
     def size(self):
         """Get/set the size of the Square."""
-        return self.
+        return self.width
 
     @size.setter
     def size(self, value):
@@ -57,7 +57,8 @@ class Square(Rectangle):
                 self.__y = args[4]
             except IndexError:
                 pass
-     def to_dictionary(self):
+
+    def to_dictionary(self):
         """Return the dictionary representation of the Square."""
         return {
             "id": self.id,
@@ -66,7 +67,7 @@ class Square(Rectangle):
             "y": self.y
         }
 
-      def __str__(self):
+    def __str__(self):
         """Return the print() and str() representation of a Square."""
         return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y,
                                                  self.width)

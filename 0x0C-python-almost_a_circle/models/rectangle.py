@@ -132,10 +132,11 @@ class Rectangle(Base):
                 self.__y = args[4]
             except IndexError:
                 pass
+
     def to_dictionary(self):
         return {
                 "id": self.id,
                 "size": self.width,
                 "x": self.x,
                 "y": self.y
-                }    
+                }
