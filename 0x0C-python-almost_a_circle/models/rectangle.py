@@ -134,6 +134,7 @@ class Rectangle(Base):
                 pass
 
     def to_dictionary(self):
+        """Returns a dictionary representation"""
         return {
                 "id": self.id,
                 "size": self.width,
