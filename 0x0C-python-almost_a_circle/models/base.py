@@ -24,10 +24,10 @@ class Base:
         Args:
             list_dictionaries: a list of dictionaries
         """
-        if list_dictionaries is None or len(list_dictionaries) == 0:
+        if list_dictionaries is None or len(list_dictionaries) == []:
             return []
-            json_string = json.dumps(list_dictionaries)
-            return json_string
+        json_string = json.dumps(list_dictionaries)
+        return json_string
 
     @classmethod
     def save_to_file(cls, list_objs):
