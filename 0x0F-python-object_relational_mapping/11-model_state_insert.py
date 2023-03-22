@@ -16,3 +16,4 @@ if __name__ == "__main__":
     with Session(engine) as session:
         new_object = State(name='Louisiana')
         session.add(new_object)
+        session.commit()
