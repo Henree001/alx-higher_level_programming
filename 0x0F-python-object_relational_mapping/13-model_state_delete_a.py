@@ -13,6 +13,8 @@ if __name__ == "__main__":
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
                     sys.argv[1], sys.argv[2], sys.argv[3]))
     with Session(engine) as session:
-        txt = delete(State).where(State.name.contains('a'))
-        session.execute(txt)
+        txt = select(State).where(State.name.contains('a'))
+        rows = session.scalars(txt)
+        for row in rows:
+            session.delete(row)
         session.commit()
