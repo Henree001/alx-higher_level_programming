@@ -16,7 +16,7 @@ if __name__ == "__main__":
                     sys.argv[1], sys.argv[2], sys.argv[3]))
     with Session(engine) as session:
         txt = select(State).where(State.name == sys.argv[4])
-        row = session.scalars(txt).first()
+        row = session.execute(txt).first()
         if row is None:
             print('Not found')
         else:
