@@ -16,3 +16,4 @@ if __name__ == "__main__":
         row = session.scalars(txt).first()
         row.name = "New Mexico"
         session.commit()
+        session.close()
