@@ -15,10 +15,9 @@ if __name__ == "__main__":
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
                     sys.argv[1], sys.argv[2], sys.argv[3]))
     with Session(engine) as session:
-        txt = select(State).where(State.name == sys.argv[4])
-        row = session.execute(txt).first()
+        txt = select(State).filter(State.name == sys.argv[4])
+        row = session.scalars(txt).first()
         if row is None:
             print('Not found')
         else:
-            for id in row:
-                print(id.id)
+            print(row.id)

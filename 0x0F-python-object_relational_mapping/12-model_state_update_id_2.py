@@ -14,6 +14,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     with Session() as session:
         txt = select(State).where(State.id == '2')
-        row = session.scalars(txt).first()
-        row.name = "New Mexico"
+        row = session.execute(txt).first()
+        for item in row:
+            item.name = "New Mexicoo"
         session.commit()
