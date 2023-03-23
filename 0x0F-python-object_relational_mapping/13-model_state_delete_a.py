@@ -14,7 +14,7 @@ if __name__ == "__main__":
                     sys.argv[1], sys.argv[2], sys.argv[3]))
     with Session(engine) as session:
         txt = select(State).where(State.name.contains('a'))
-        rows = session.scalars(txt)
+        rows = session.scalars(txt).all()
         for row in rows:
             session.delete(row)
         session.commit()
