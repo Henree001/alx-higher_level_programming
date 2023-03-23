@@ -16,5 +16,5 @@ if __name__ == "__main__":
         txt = select(State).where(State.id == '2')
         row = session.execute(txt).first()
         for item in row:
-            item.name = "New Mexico"
+            item.name = "New Mexica"
         session.commit()
