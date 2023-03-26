@@ -17,4 +17,5 @@ if __name__ == "__main__":
         rows = session.scalars(txt).all()
         for row in rows:
             session.delete(row)
+
         session.commit()
