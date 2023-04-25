@@ -10,7 +10,7 @@ if __name__ == "__main__":
     if len(argv) == 2:
         r = requests.post(url, data={'q': ""})
     else:
-        r = requests.get(url, data={'q': argv[1]})
+        r = requests.post(url, data={'q': argv[1]})
     try:
         r = r.json()
         if len(r) == 0:
