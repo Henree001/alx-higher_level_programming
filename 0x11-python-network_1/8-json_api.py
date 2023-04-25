@@ -7,9 +7,9 @@ from sys import argv
 
 if __name__ == "__main__":
     if len(argv) == 2:
-        r = requests.get(argv[1], params={'q': ""})
+        r = requests.post(argv[1], data={'q': ""})
     else:
-        r = requests.get(argv[1], params={'q': argv[2]})
+        r = requests.get(argv[1], data={'q': argv[2]})
     try:
         r = r.json()
         if len(r) == 0:
