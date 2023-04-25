@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-import requests
 """Takes URL and prints out response"""
+import requests
 if __name__ == "__main__":
     rep = requests.get('https://alx-intranet.hbtn.io/status')
     print("Body response:")
