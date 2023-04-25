@@ -7,13 +7,13 @@ from sys import argv
 
 if __name__ == "__main__":
     url = 'http://0.0.0.0:5000/search_user'
-    if len(argv) == 2:
+    if len(argv) == 1:
         r = requests.post(url, data={'q': ""})
     else:
         r = requests.post(url, data={'q': argv[1]})
     try:
         r = r.json()
-        if len(r) == 0:
+        if not r:
             print('No result')
         else:
             print("[{}] {}".format(r['id'], r['name']))
