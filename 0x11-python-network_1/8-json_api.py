@@ -6,10 +6,11 @@ import requests
 from sys import argv
 
 if __name__ == "__main__":
+    url = 'http://0.0.0.0:5000/search_user'
     if len(argv) == 2:
-        r = requests.post(argv[1], data={'q': ""})
+        r = requests.post(url, data={'q': ""})
     else:
-        r = requests.get(argv[1], data={'q': argv[2]})
+        r = requests.get(url, data={'q': argv[1]})
     try:
         r = r.json()
         if len(r) == 0:
