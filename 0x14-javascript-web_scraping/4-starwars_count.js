@@ -9,7 +9,7 @@ request(url, function (error, response, body) {
     body = JSON.parse(body).results;
     for (const item of body) {
       for (const characters of item.characters) {
-        if (characters === 'https://swapi-api.alx-tools.com/api/people/18/') {
+        if (characters.split('/')[5] === '18') {
           count++;
         }
       }
