@@ -6,7 +6,6 @@ request(url, function (error, response, body) {
   if (error) {
     console.error(error);
   } else {
-    let count = 0;
     const obj = {};
     body = JSON.parse(body);
     for (let i = 0; i < body.length; ++i) {
