@@ -9,7 +9,7 @@ request(url, function (error, response, body) {
     const obj = {};
     body = JSON.parse(body);
     for (let i = 0; i < body.length; ++i) {
-      if (body[i].completed && !obj[body[i].userId]) {
+      if (!obj[body[i].userId]) {
         obj[body[i].userId] = 0;
       }
       if (body[i].completed) {
